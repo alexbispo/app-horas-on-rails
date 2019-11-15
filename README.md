@@ -1,6 +1,6 @@
 # App Horas
 
-This is my Ruby on Rails version of the App Horas, an web app to control work hours. I like implement this app whenever I start lerning new tecnologies.
+This is my Ruby on Rails version of the App Horas, an web app to control work hours. I like implement this app whenever I start lerning new technologies.
 
 MVP:
 
