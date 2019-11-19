@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2019_11_19_041016) do
   enable_extension "plpgsql"
 
   create_table "apontamentos", force: :cascade do |t|
-    t.datetime "entrada"
-    t.datetime "saida"
+    t.datetime "entrada", null: false
+    t.datetime "saida", null: false
     t.string "pausas"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

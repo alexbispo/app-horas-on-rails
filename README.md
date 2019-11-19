@@ -6,17 +6,17 @@ tecnologia nova.
 
 MVP (Produto mínimo viável):
 
-  - Deve ser possível registrar um dia trabalhado.
-  - Deve ser possível listar todos os dias trabalhados.
-  - Deve ser possível listar os dias trabalhados por mês e ano.
-  - Deve ser possível selecionar e deletar dias trabalhados.
-  - Deve ser possível editar um dia trabalhado.
-  - Deve ser possível master acesso privado aos dias tabalhados apenas
+  - Deve ser possível registrar um apontamento.
+  - Deve ser possível listar todos os apontamentos.
+  - Deve ser possível listar os apontamentos por mês e ano.
+  - Deve ser possível selecionar e deletar apontamentos.
+  - Deve ser possível editar um apontamento.
+  - Deve ser possível manter acesso privado aos apontamentos apenas
   usando um link exclusivo, sem necessidade de cadastro ou logar no sistema.
 
 Próximas fetures:
 
-  - Deve ser possível baixar um arquivo no formato CSV com os dias trabalhados listados.
+  - Deve ser possível baixar um arquivo no formato CSV com os apontamentos listados.
   - Deve ser possível compartilhar um link de apenas leitura.
 
 * Versão do Ruby
