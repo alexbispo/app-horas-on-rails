@@ -1,37 +1,39 @@
 # App Horas
 
-This is my Ruby on Rails version of the App Horas, an web app to control work hours. I like implement this app whenever I start lerning new technologies.
+Esta é a minha versão Ruby on Rails do App Horas, uma aplicação web para controlar as horas
+trabalhadas. Gosto de usar implementar esta aplicação quando estou aprendendo alguma
+tecnologia nova.
 
-MVP:
+MVP (Produto mínimo viável):
 
-  - It should be possible register worked day.
-  - It should be possible list all daily registers.
-  - It should be possible list daily registers by month and year.
-  - It should be possible remove a register.
-  - It should be possible edit a register.
-  - It should be possible have private access just using a private link.
-  Without sign-in or sig-up.
+  - Deve ser possível registrar um dia trabalhado.
+  - Deve ser possível listar todos os dias trabalhados.
+  - Deve ser possível listar os dias trabalhados por mês e ano.
+  - Deve ser possível selecionar e deletar dias trabalhados.
+  - Deve ser possível editar um dia trabalhado.
+  - Deve ser possível master acesso privado aos dias tabalhados apenas
+  usando um link exclusivo, sem necessidade de cadastro ou logar no sistema.
 
-Next features:
+Próximas fetures:
 
-  - It should be possible export daily registers to CSV file.
-  - It should be possible share a read only private link.
+  - Deve ser possível baixar um arquivo no formato CSV com os dias trabalhados listados.
+  - Deve ser possível compartilhar um link de apenas leitura.
 
-* Ruby version
+* Versão do Ruby
   >= 2.5.5
 
-* Database initialization
+* Inicializar o bando de dados com Docker
     $ docker-compose up -d
 
-* Database creation
+* Criar o usuário de banco de dados para a aplicação
     $ docker exec -it <container> /bin/bash
 
     $ psql -U postgres
 
     postgres=# create user app-horas with createdb login password 'rails';
 
-* How to run the test suite
+* Rodar a suite de testes automatizados
     $ rails spec
 
-* Deployment instructions
-  Soon...
+* Intruções de para implantação
+  Em breve...

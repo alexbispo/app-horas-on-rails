@@ -1,0 +1,2 @@
+class Apontamento < ApplicationRecord
+end
