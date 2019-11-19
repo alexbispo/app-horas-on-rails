@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe RegistrarApontamentoService, type: :service do
   describe '#registrar' do
     it 'deve registrar um apontamento' do
-      # allow(Apontamento).to receive(:create!)
+      allow(Apontamento).to receive(:create!).and_return(true)
 
       opts = {
         entrada: '07/03/2019 06:47',
@@ -15,7 +15,7 @@ RSpec.describe RegistrarApontamentoService, type: :service do
 
       result = subject.registrar(opts)
 
-      # expect(Apontamento).to have_received(:create!)
+      expect(Apontamento).to have_received(:create!)
       expect(result).to be true
     end
   end

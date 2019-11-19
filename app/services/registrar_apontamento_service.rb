@@ -1,5 +1,5 @@
 class RegistrarApontamentoService
   def registrar(opts)
-    true
+    return Apontamento.create!(opts)
   end
 end
