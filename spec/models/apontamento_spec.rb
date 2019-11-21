@@ -27,10 +27,28 @@ RSpec.describe Apontamento, type: :model do
       expect(subject.valid?).to be false
       expect(subject.errors.details[:pausas].present?).to be true
     end
+
+    example 'apontamento somente com o horário de entrada' do
+      entrou = Time.zone.local(2019, 7, 10, 0)
+      saiu = (entrou + 9.hours)
+
+      subject.entrada = entrou
+
+      expect(subject.valid?).to be false
+    end
+
+    example 'apontamento somente com o horário de saida' do
+      entrou = Time.zone.local(2019, 7, 10, 0)
+      saiu = (entrou + 9.hours)
+
+      subject.saida = saiu
+
+      expect(subject.valid?).to be false
+    end
   end
 
   describe 'válido' do
-    example 'apontamento com entrada e saida' do
+    example 'apontamento com ambos horários de entrada e saida' do
       entrou = Time.zone.local(2019, 7, 10, 0)
       saiu = (entrou + 9.hours)
 
