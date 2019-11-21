@@ -25,7 +25,7 @@ development:
   <<: *default
   database: app_horas_development
   username: app_horas
-  password: rails
+  password: app_horas
   host: localhost
   port: 5432
 
@@ -45,7 +45,7 @@ test:
   <<: *default
   database: app_horas_test
   username: app_horas
-  password: rails
+  password: app_horas
   host: localhost
   port: 5432
 
