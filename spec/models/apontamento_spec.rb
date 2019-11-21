@@ -12,7 +12,7 @@ RSpec.describe Apontamento, type: :model do
       subject.saida = agora
 
       expect(subject.valid?).to be false
-      expect(subject.errors.details[:entrada].present?).to be true
+      expect(subject.errors[:entrada].any?).to be true
     end
 
     example 'duracao das pausas contendo texto' do
@@ -25,7 +25,7 @@ RSpec.describe Apontamento, type: :model do
       subject.pausas = "teste"
 
       expect(subject.valid?).to be false
-      expect(subject.errors.details[:pausas].present?).to be true
+      expect(subject.errors[:pausas].any?).to be true
     end
 
     example 'apontamento somente com o horário de entrada' do
@@ -35,6 +35,7 @@ RSpec.describe Apontamento, type: :model do
       subject.entrada = entrou
 
       expect(subject.valid?).to be false
+      expect(subject.errors[:saida].any?).to be true
     end
 
     example 'apontamento somente com o horário de saida' do
@@ -44,6 +45,7 @@ RSpec.describe Apontamento, type: :model do
       subject.saida = saiu
 
       expect(subject.valid?).to be false
+      expect(subject.errors[:entrada].any?).to be true
     end
   end
 
