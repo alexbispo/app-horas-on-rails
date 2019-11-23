@@ -8,6 +8,15 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
+require("jquery/dist/jquery")
+require("bootstrap/dist/js/bootstrap")
+require("../stylesheets/application")
+require("@fortawesome/fontawesome-free/js/all")
+require("jquery.easing/jquery.easing")
+require("packs/sb-admin-2")
+require("datatables.net/js/jquery.dataTables")
+require("datatables.net-bs4/js/dataTables.bootstrap4")
+require("chart.js/dist/Chart")
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
