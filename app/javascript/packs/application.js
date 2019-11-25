@@ -18,6 +18,8 @@ require("datatables.net/js/jquery.dataTables")
 require("datatables.net-bs4/js/dataTables.bootstrap4")
 require("chart.js/dist/Chart")
 
+require("packs/apontamento-form")
+
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.
