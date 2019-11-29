@@ -1,39 +1,36 @@
-<h1 class="h3 mb-4 text-gray-800">Novo Apontamento</h1>
-
+<nav class="navbar navbar-expand-lg static-top" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Novo Apontamento</li>
+  </ol>
+</nav>
 <div class="container">
   <%= form_for :apontamento do |f| %>
     <div class="form-group row">
       <div class="col-md-2">
-        <label for="apontamento_entrada">Horário de Entrada</label>
+        <label for="apontamento_entrada">Horário de Entrada:</label>
       </div>
-      <div class="col-md-4">
-        <%= f.datetime_field :entrada, class:"form-control" %>
+      <div class="col-md-3">
+        <%= f.datetime_field :entrada, value: Time.zone.now.to_s(:input_datetime_local), class:"form-control" %>
       </div>
     </div>
     <div class="form-group row">
       <div class="col-md-2">
-        <label for="apontamento_saida">Horário de Saída</label>
+        <label for="apontamento_saida">Horário de Saída:</label>
       </div>
-      <div class="col-md-4">
-        <%= f.datetime_field :saida, class:"form-control" %>
+      <div class="col-md-3">
+        <%= f.datetime_field :saida, value: 9.hour.from_now.to_s(:input_datetime_local), class:"form-control" %>
       </div>
     </div>
     <div class="form-group row grupo_pausas">
-      <div class="col-md-1">
-        <label for="apontamento_pausas">Pausa:</label>
-      </div>
-      <div class="col-md-4">
-        <%= f.datetime_field :pausa_entrada, class:"form-control" %>
-      </div>
-      <div class="col-md-1">
-        <label for="apontamento_pausas">Até:</label>
-      </div>
-      <div class="col-md-4">
-        <%= f.datetime_field :pausa_saida, class:"form-control" %>
+      <div class="col-md-3">
+        <label for="pausa_hora">Pausa total em minutos:</label>
       </div>
       <div class="col-md-2">
-        <a href="#" class="btn btn-primary btn_pausa_confirma">Confirma</a>
+        <%= f.number_field :pausa_hora, value: "60", min: 0, max: 480, class:"form-control" %>
       </div>
     </div>
+    <%= f.submit "Salvar Apontamento", class: "btn btn-success" %>
+    <%= link_to 'Cancelar', "#", class: "btn btn-danger" %>
   <% end %>
 </div>
